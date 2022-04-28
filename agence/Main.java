@@ -1,3 +1,5 @@
+import controleur.Registre;
+
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +13,8 @@ public class Main {
         // TODO  Ecrire le menu de gestion des rapports et les faire passer dans le controleur
         // TODO  Ecrire le menu de gestion des facturations et les faire passer dans le controleur
         // Ecrire le menu de gestion des reservations et les faire passer dans le controleur
+        Registre _registre = new Registre();
+
         System.out.println("Menu principal");
         System.out.println("1. Gestion des employes");
         System.out.println("2. Gestion des clients");
@@ -20,31 +24,34 @@ public class Main {
         System.out.println("6. Gestion des facturations");
         Scanner sc = new Scanner(System.in);
         int choix = sc.nextInt();
-        do {
-            switch (choix) {
-                case 1:
-                    System.out.println("Menu de gestion de employes");
+        //     do {
+        switch (choix) {
+            case 1:
+                System.out.println("Menu de gestion de employes");
 
-                    break;
-                case 2:
-                    System.out.println("Menu de gestion de clients");
-                    break;
-                case 3:
-                    System.out.println("Menu de gestion de vehicules");
-                    break;
-                case 4:
-                    System.out.println("Menu de gestion de reservations");
-                    break;
-                case 5:
-                    System.out.println("Menu de gestion de rapports");
-                    break;
-                case 6:
-                    System.out.println("Menu de gestion de facturations");
-                    break;
-                default:
-                    System.out.println("Choix invalide");
-            }
-        } while (choix != 0);
+                break;
+            case 2:
+                System.out.println("Menu de gestion de clients");
+                break;
+            case 3:
+                System.out.println("Menu de gestion de vehicules");
+                break;
+            case 4:
+                System.out.println("Menu de gestion de reservations");
+                break;
+            case 5:
+                System.out.println("Menu de gestion de rapports");
+                //_registre._saisirRapport(" "," ");
+                _registre._saisirRapport("Keita","00932");
+                //_registre.affiBD();
+                break;
+            case 6:
+                System.out.println("Menu de gestion de facturations");
+                break;
+            default:
+                System.out.println("Choix invalide");
+        }
+        //   } while (choix != 0);
     }
 }
 

@@ -1,13 +1,7 @@
 package modele.Employe;
 
 public class Employe {
-    public String getFonction() {
-        return fonction;
-    }
 
-    public void setFonction(String fonction) {
-        this.fonction = fonction;
-    }
 
     String fonction;
     String id;
@@ -68,5 +62,13 @@ public class Employe {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getFonction() {
+        return fonction;
+    }
+
+    public void setFonction(String fonction) {
+        this.fonction = fonction;
     }
 }

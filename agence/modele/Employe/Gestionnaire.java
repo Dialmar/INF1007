@@ -16,7 +16,7 @@ public class Gestionnaire extends Employe {
 
 
 
-    public void EstConnecter(String login, String password) {
+ /*   public void EstConnecter(String login, String password) {
         BaseDeDonnees.isGestionnaireLogin(login, password);
 
     }
@@ -28,6 +28,8 @@ public class Gestionnaire extends Employe {
         return String.valueOf(i);
     }
 
+  */
 
-    }
+
+}
 
