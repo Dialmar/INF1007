@@ -1,11 +1,8 @@
 package controleur;
 
 import modele.Client;
-import modele.Location;
 import modele.Vehicule;
-import stockage.StockagePersistantClient;
-import stockage.StockagePersistantLocation;
-import stockage.StockagePersistantVehicule;
+import stockage.StockagePersistant;
 
 import java.util.List;
 
@@ -33,22 +30,22 @@ public class ControleurReservation {
 
     private void recuperClient(String numeroDossier)
     {
-        client = persistant.recupererClient(numeroDossier);
+        client = stockage.recupererClient(numeroDossier);
     }
 
     private void recuperVehicule(String numImmatri)
     {
-        vehicule = persistant.recupererVehicule(numImmatri);
+        vehicule = stockage.recupererVehicule(numImmatri);
     }
 
     private void terminerVehiculeReservation()
     {
-        reservation.getVehicule().setReservation(false);
+        .getVehicule().setReservation(false);
     }
 
     private void ReservationVehicule()
     {
-        reservation.getVehicule().setReservation(false);
+        stockage.getVehicule().setReservation(false);
     }
 
     public void reservationVehicule(String numImmatri, String numeroDossier)

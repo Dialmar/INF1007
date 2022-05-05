@@ -3,9 +3,7 @@ package controleur;
 import modele.Client;
 import modele.Location;
 import modele.Vehicule;
-import stockage.StockagePersistantClient;
-import stockage.StockagePersistantLocation;
-import stockage.StockagePersistantVehicule;
+import stockage.StockagePersistant;
 
 import java.util.List;
 
@@ -14,9 +12,7 @@ public class ControleurLocation {
     private Client client;
     private Vehicule vehicule;
     private List<Location> listeLocation;
-    private StockagePersistantLocation stockage;
-    private StockagePersistantClient persistantClient;
-    private StockagePersistantVehicule persistantVehicule;
+    private StockagePersistant stockage;
 
     public Location getLocation() {
         return location;
@@ -36,12 +32,12 @@ public class ControleurLocation {
 
     private void recuperClient(String numeroDossier)
     {
-        client = persistantClient.recupererClient(numeroDossier);
+        client = stockage.recupererClient(numeroDossier);
     }
 
     private void recuperVehicule(String numImmatri)
     {
-        vehicule = persistantVehicule.recupererVehicule(numImmatri);
+        vehicule = stockage.recupererVehicule(numImmatri);
     }
 
     private void terminerVehiculeLocation()
