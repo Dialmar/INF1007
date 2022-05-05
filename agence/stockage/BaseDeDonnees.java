@@ -12,46 +12,35 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BaseDeDonnees {
-    HashMap<String, Employe> employe ;
-    HashMap<String, Rapport> reports ;
+    HashMap<String, Employe> employe;
+    static HashMap<String, Rapport> reports;
     ArrayList<Client> clients;
     ArrayList<Location> locations;
     ArrayList<Vehicule> vehicules;
     static BaseDeDonnees instance;
 
-//    private BaseDeDonnees()
-//    {
-//        employe = new HashMap<>();
-//        clients = new ArrayList<>();
-//        locations = new ArrayList<>();
-//        vehicules = new ArrayList<>();
-//    }
 
-    public static BaseDeDonnees getInstance ()
-    {
-        if (instance == null)
-        {
+    public static BaseDeDonnees getInstance() {
+        if (instance == null) {
             instance = new BaseDeDonnees();
         }
 
         return instance;
     }
 
-    public ArrayList<Client> getClients()
-    {
+    public ArrayList<Client> getClients() {
         return clients;
     }
 
     private BaseDeDonnees() {
-//gestionnaires.put("247", new Gestionnaire("Gestionnaire", "1", "Gestionnaire", "Gestionnaire", "Gestionnaire", "Gestionnaire"));
 
         employe = new HashMap<>();
         reports = new HashMap<>();
-        Gestionnaire gestionnaire = new Gestionnaire("G01","Tom","Alpha","Keita","00932");
-        Prepose prepose = new Prepose("B002","Ismael","Gans","Roger","9204");
+        Gestionnaire gestionnaire = new Gestionnaire("G01", "Tom", "Alpha", "Keita", "00932");
+        Prepose prepose = new Prepose("B002", "Ismael", "Gans", "Roger", "9204");
 
-        employe.put("0923",gestionnaire);
-        employe.put("0895",prepose);
+        employe.put("0923", gestionnaire);
+        employe.put("0895", prepose);
         clients = new ArrayList<>();
         locations = new ArrayList<>();
         vehicules = new ArrayList<>();
@@ -59,39 +48,31 @@ public class BaseDeDonnees {
 
     }
 
-    //auto increment id for hashmap Gestionnaires
-
- /*  private String setkey() {
-        int i = 1;
-        while (gestionnaires.containsKey(String.valueOf(i))) {
-            i++;
-        }
-        return String.valueOf(i);
-    }
-
-  */
-
     public boolean isGestionnaireLogin(String login, String password) {
         boolean result = false;
-        for (Employe employe1: employe.values()) {
+        for (Employe employe1 : employe.values()) {
             if (employe1.getLogin().equals(login) && employe1.getPassword().equals(password)) {
-                if(employe1.getFonction().equals("gestionnaire")) result = true;
+                if (employe1.getFonction().equals("gestionnaire")) result = true;
             }
         }
         return result;
     }
 
-    public void saveRapport(Rapport rapport){
+    public void saveRapport(Rapport rapport) {
         reports.put("1", rapport);
     }
 
-    public void affichage(){
-        for (Rapport rapport: reports.values()) {
+
+    public void affichageRapport() {
+        for (Rapport rapport : BaseDeDonnees.reports.values()) {
             System.out.println("DATE: " + rapport.getDate());
             System.out.println("TITRE : " + rapport.getTitre());
             System.out.println("DESCRIPTION: " + rapport.getDesc());
         }
     }
+    /*public void generateRapportKey(String key){
+       for int
+    }*/
 }
 
 

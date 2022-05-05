@@ -27,7 +27,7 @@ public class ControleurRapport {
     //  System.out.println("Controleur SAve db");
     Rapport rapport = new Rapport(t,d,des);
     baseDeDonnees.saveRapport(rapport);
-    baseDeDonnees.affichage();
+    baseDeDonnees.affichageRapport();
 
   }
 

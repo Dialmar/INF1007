@@ -41,10 +41,12 @@ public class Main {
                 break;
             case 5:
                 System.out.println("Menu de gestion de rapports");
-                //_registre._saisirRapport(" "," ");
-                _registre._saisirRapport("Keita","00932");
-                //_registre.affiBD();
-                break;
+                System.out.println("Entrez votre Identifiant :");
+                Scanner input = new Scanner(System.in);
+                String l = input.nextLine();
+                System.out.println("Entrez votre password :");
+                String p = input.nextLine();
+                _registre._saisirRapport(l, p);
             case 6:
                 System.out.println("Menu de gestion de facturations");
                 break;
