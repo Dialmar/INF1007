@@ -11,7 +11,7 @@ public class Client {
     private String password;
     private String telephone;
     private String email;
-    private String NumeroCarte;
+    private String numeroDossier;
     private String NumeroDePermis;
     private String dateDeCreation;
     private String NumeroDeCarteBancaire;
@@ -24,7 +24,7 @@ public class Client {
         this.password = password;
         this.telephone = telephone;
         this.email = email;
-        NumeroCarte = numeroCarte;
+        numeroDossier = numeroCarte;
         NumeroDePermis = numeroDePermis;
         this.dateDeCreation = dateDeCreation;
         NumeroDeCarteBancaire = numeroDeCarteBancaire;
@@ -88,12 +88,12 @@ public class Client {
         this.email = email;
     }
 
-    public String getNumeroCarte() {
-        return NumeroCarte;
+    public String getNumeroDossier() {
+        return numeroDossier;
     }
 
-    public void setNumeroCarte(String numeroCarte) {
-        NumeroCarte = numeroCarte;
+    public void setNumeroDossier(String numeroDossier) {
+        this.numeroDossier = numeroDossier;
     }
 
     public String getNumeroDePermis() {
@@ -137,7 +137,7 @@ public class Client {
                 ", password='" + password + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", email='" + email + '\'' +
-                ", NumeroCarte='" + NumeroCarte + '\'' +
+                ", NumeroCarte='" + numeroDossier + '\'' +
                 ", NumeroDePermis='" + NumeroDePermis + '\'' +
                 ", dateDeCreation='" + dateDeCreation + '\'' +
                 ", NumeroDeCarteBancaire='" + NumeroDeCarteBancaire + '\'' +

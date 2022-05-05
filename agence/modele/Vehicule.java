@@ -3,19 +3,31 @@ package modele;
 public class Vehicule {
     private int NumeroDeSerie;
     private String Marque;
+    private String numImmatri;
     private String Type;
     private int Annee;
     private String Etat;
     private String Kilometrage;
     private boolean location;
 
-    public Vehicule(int NumeroDeSerie, String Marque, String Type, int Annee, String Etat, String Kilometrage) {
+    public Vehicule(int NumeroDeSerie, String Marque, String Type, int Annee, String Etat, String Kilometrage, String numImmatri) {
         this.NumeroDeSerie = NumeroDeSerie;
         this.Marque = Marque;
         this.Type = Type;
         this.Annee = Annee;
         this.Etat = Etat;
         this.Kilometrage = Kilometrage;
+        this.numImmatri = numImmatri;
+    }
+
+    public String getNumImmatri()
+    {
+        return numImmatri;
+    }
+
+    public void setNumImmatri(String numImmatri)
+    {
+        this.numImmatri = numImmatri;
     }
 
     public int getNumeroDeSerie()

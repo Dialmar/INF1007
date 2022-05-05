@@ -16,12 +16,12 @@ public class StockagePersistantClient {
     public void sauvegarde (Client client){
         baseDeDonnees.clients.add(client);    }
 
-    public Client recupererClient(String nom, String prenom)
+    public Client recupererClient(String numeroDossier)
     {
         ArrayList<Client> temp = baseDeDonnees.clients;
         for (Client client : temp)
         {
-            if (client.getNom().equals(nom) && client.getPrenom().equals(prenom))
+            if (client.getNumeroDossier().equals(numeroDossier))
             {
                 return client;
             }

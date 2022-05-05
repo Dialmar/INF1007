@@ -3,10 +3,27 @@ package modele;
 public class Location {
     private float kilometrage;
     private float prix;
+    private Client client;
     private String dateLocation;
     private boolean statutLocationTerminer;
     private Vehicule vehicule;
 
+    public Location(float kilometrage, float prix, Client client, String dateLocation, Vehicule vehicule)
+    {
+        this.kilometrage = kilometrage;
+        this.prix = prix;
+        this.client = client;
+        this.dateLocation = dateLocation;
+        this.statutLocationTerminer = false;
+        this.vehicule = vehicule;
+    }
+
+    public Location(Client client, Vehicule vehicule)
+    {
+        this.client = client;
+        this.vehicule = vehicule;
+        this.statutLocationTerminer = false;
+    }
 
     private void terminerLocation (){
 
