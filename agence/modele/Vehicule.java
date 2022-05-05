@@ -1,12 +1,12 @@
 package modele;
 
 public class Vehicule {
-    public int NumeroDeSerie;
-    public String Marque;
-    public String Type;
-    public int Annee;
-    public String Etat;
-    public String Kilometrage;
+    private int NumeroDeSerie;
+    private String Marque;
+    private String Type;
+    private int Annee;
+    private String Etat;
+    private String Kilometrage;
 
     public Vehicule(int NumeroDeSerie, String Marque, String Type, int Annee, String Etat, String Kilometrage) {
         this.NumeroDeSerie = NumeroDeSerie;

@@ -5,16 +5,16 @@ import java.util.regex.Pattern;
 public class Client {
     //public int id;
     private static final String EMAIL_REGEX_PATTERN = "^(.+)@(.+).(.+)$";
-    public String nom;
-    public String prenom;
-    public String adresse;
-    public String password;
-    public String telephone;
-    public String email;
-    public String NumeroCarte;
-    public String NumeroDePermis;
-    public String dateDeCreation;
-    public String NumeroDeCarteBancaire;
+    private String nom;
+    private String prenom;
+    private String adresse;
+    private String password;
+    private String telephone;
+    private String email;
+    private String NumeroCarte;
+    private String NumeroDePermis;
+    private String dateDeCreation;
+    private String NumeroDeCarteBancaire;
 
     public Client(String nom, String prenom, String adresse, String password, String telephone, String email, String numeroCarte, String numeroDePermis, String dateDeCreation, String numeroDeCarteBancaire) {
         this.nom = nom;

@@ -25,4 +25,11 @@ public class ControleurClient {
     public void setListeClient(List<Client> listeClient) {
         this.listeClient = listeClient;
     }
+
+    public void sauvegarde (Client client){
+        stockage.sauvegarde(client);
+
+
+    }
+
 }
