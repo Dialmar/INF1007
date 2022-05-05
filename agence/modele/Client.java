@@ -2,7 +2,7 @@ package modele;
 
 import java.util.regex.Pattern;
 
-public class DossierPersonnel {
+public class Client {
     //public int id;
     private static final String EMAIL_REGEX_PATTERN = "^(.+)@(.+).(.+)$";
     public String nom;
@@ -16,7 +16,7 @@ public class DossierPersonnel {
     public String dateDeCreation;
     public String NumeroDeCarteBancaire;
 
-    public DossierPersonnel(String nom, String prenom, String adresse, String password, String telephone, String email, String numeroCarte, String numeroDePermis, String dateDeCreation, String numeroDeCarteBancaire) {
+    public Client(String nom, String prenom, String adresse, String password, String telephone, String email, String numeroCarte, String numeroDePermis, String dateDeCreation, String numeroDeCarteBancaire) {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
