@@ -4,6 +4,7 @@ import modele.Client;
 import modele.Employe.Employe;
 import modele.Employe.Gestionnaire;
 import modele.Employe.Prepose;
+import modele.Location;
 import modele.Rapport;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class BaseDeDonnees {
     HashMap<String, Employe> employe ;
     HashMap<String, Rapport> reports ;
     ArrayList<Client> clients;
+    ArrayList<Location> locations;
     BaseDeDonnees instance;
 
     private BaseDeDonnees()

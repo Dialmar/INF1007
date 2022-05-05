@@ -7,6 +7,7 @@ public class Vehicule {
     private int Annee;
     private String Etat;
     private String Kilometrage;
+    private boolean location;
 
     public Vehicule(int NumeroDeSerie, String Marque, String Type, int Annee, String Etat, String Kilometrage) {
         this.NumeroDeSerie = NumeroDeSerie;
@@ -17,5 +18,73 @@ public class Vehicule {
         this.Kilometrage = Kilometrage;
     }
 
+    public int getNumeroDeSerie()
+    {
+        return NumeroDeSerie;
+    }
 
+    public void setNumeroDeSerie(int numeroDeSerie)
+    {
+        NumeroDeSerie = numeroDeSerie;
+    }
+
+    public String getMarque()
+    {
+        return Marque;
+    }
+
+    public void setMarque(String marque)
+    {
+        Marque = marque;
+    }
+
+    public String getType()
+    {
+        return Type;
+    }
+
+    public void setType(String type)
+    {
+        Type = type;
+    }
+
+    public int getAnnee()
+    {
+        return Annee;
+    }
+
+    public void setAnnee(int annee)
+    {
+        Annee = annee;
+    }
+
+    public String getEtat()
+    {
+        return Etat;
+    }
+
+    public void setEtat(String etat)
+    {
+        Etat = etat;
+    }
+
+    public String getKilometrage()
+    {
+        return Kilometrage;
+    }
+
+    public void setKilometrage(String kilometrage)
+    {
+        Kilometrage = kilometrage;
+    }
+
+    public boolean getLocation()
+    {
+        return location;
+    }
+
+    public void setLocation(boolean location)
+    {
+        this.location = location;
+    }
 }

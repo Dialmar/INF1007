@@ -15,6 +15,7 @@ public class Client {
     private String NumeroDePermis;
     private String dateDeCreation;
     private String NumeroDeCarteBancaire;
+    private Location location;
 
     public Client(String nom, String prenom, String adresse, String password, String telephone, String email, String numeroCarte, String numeroDePermis, String dateDeCreation, String numeroDeCarteBancaire) {
         this.nom = nom;
@@ -27,6 +28,16 @@ public class Client {
         NumeroDePermis = numeroDePermis;
         this.dateDeCreation = dateDeCreation;
         NumeroDeCarteBancaire = numeroDeCarteBancaire;
+    }
+
+    public Location getLocation()
+    {
+        return location;
+    }
+
+    public void setLocation(Location location)
+    {
+        this.location = location;
     }
 
     public String getNom() {
