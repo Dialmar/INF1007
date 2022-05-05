@@ -15,7 +15,7 @@ public class BaseDeDonnees {
     ArrayList<Client> clients;
     BaseDeDonnees instance;
 
-    public BaseDeDonnees()
+    private BaseDeDonnees()
     {
         employe = new HashMap<>();
         clients = new ArrayList<>();
