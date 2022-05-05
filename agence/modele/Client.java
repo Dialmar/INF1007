@@ -16,18 +16,30 @@ public class Client {
     private String dateDeCreation;
     private String NumeroDeCarteBancaire;
     private Location location;
+    private Reservation reservation;
 
-    public Client(String nom, String prenom, String adresse, String password, String telephone, String email, String numeroCarte, String numeroDePermis, String dateDeCreation, String numeroDeCarteBancaire) {
+    public Client(String nom, String prenom, String adresse, String password, String telephone, String email, String numeroDossier, String numeroDePermis, String dateDeCreation, String numeroDeCarteBancaire)
+    {
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.password = password;
         this.telephone = telephone;
         this.email = email;
-        numeroDossier = numeroCarte;
+        this.numeroDossier = numeroDossier;
         NumeroDePermis = numeroDePermis;
         this.dateDeCreation = dateDeCreation;
         NumeroDeCarteBancaire = numeroDeCarteBancaire;
+    }
+
+    public Reservation getReservation()
+    {
+        return reservation;
+    }
+
+    public void setReservation(Reservation reservation)
+    {
+        this.reservation = reservation;
     }
 
     public Location getLocation()
