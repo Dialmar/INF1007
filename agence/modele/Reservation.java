@@ -5,14 +5,16 @@ public class Reservation {
     private float prix;
     private Client client;
     private String dateReseration;
+    private String dateFinReservation;
     private Vehicule vehicule;
 
-    public Reservation(float kilometrage, float prix, Client client, String dateLocation, Vehicule vehicule)
+    public Reservation(float kilometrage, float prix, Client client, String dateReseration, String dateFinReservation, Vehicule vehicule)
     {
         this.kilometrage = kilometrage;
         this.prix = prix;
         this.client = client;
-        this.dateReseration = dateReservation;
+        this.dateReseration = dateReseration;
+        this.dateFinReservation = dateFinReservation;
         this.vehicule = vehicule;
     }
 
@@ -43,24 +45,34 @@ public class Reservation {
         this.prix = prix;
     }
 
-    public String getDateLocation()
+    public Client getClient()
     {
-        return dateLocation;
+        return client;
     }
 
-    public void setDateLocation(String dateLocation)
+    public void setClient(Client client)
     {
-        this.dateLocation = dateLocation;
+        this.client = client;
     }
 
-    public boolean isStatutLocationTerminer()
+    public String getDateReseration()
     {
-        return statutLocationTerminer;
+        return dateReseration;
     }
 
-    public void setStatutLocationTerminer(boolean statutLocationTerminer)
+    public void setDateReseration(String dateReseration)
     {
-        this.statutLocationTerminer = statutLocationTerminer;
+        this.dateReseration = dateReseration;
+    }
+
+    public String getDateFinReservation()
+    {
+        return dateFinReservation;
+    }
+
+    public void setDateFinReservation(String dateFinReservation)
+    {
+        this.dateFinReservation = dateFinReservation;
     }
 
     public Vehicule getVehicule()
@@ -74,4 +86,4 @@ public class Reservation {
     }
 }
 
-}
+

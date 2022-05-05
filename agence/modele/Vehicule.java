@@ -9,6 +9,7 @@ public class Vehicule {
     private String Etat;
     private String Kilometrage;
     private boolean location;
+    private boolean reservation;
 
     public Vehicule(int NumeroDeSerie, String Marque, String Type, int Annee, String Etat, String Kilometrage, String numImmatri) {
         this.NumeroDeSerie = NumeroDeSerie;
@@ -18,6 +19,8 @@ public class Vehicule {
         this.Etat = Etat;
         this.Kilometrage = Kilometrage;
         this.numImmatri = numImmatri;
+        reservation = false;
+        location = false;
     }
 
     public String getNumImmatri()
@@ -98,5 +101,20 @@ public class Vehicule {
     public void setLocation(boolean location)
     {
         this.location = location;
+    }
+
+    public boolean isLocation()
+    {
+        return location;
+    }
+
+    public boolean isReservation()
+    {
+        return reservation;
+    }
+
+    public void setReservation(boolean reservation)
+    {
+        this.reservation = reservation;
     }
 }
