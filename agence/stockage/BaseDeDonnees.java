@@ -1,27 +1,52 @@
 package stockage;
 
+import modele.Client;
 import modele.Employe.Employe;
 import modele.Employe.Gestionnaire;
 import modele.Employe.Prepose;
 import modele.Rapport;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BaseDeDonnees {
-    HashMap<String, Employe> employe = new HashMap<>();
-    HashMap<String, Rapport> reports = new HashMap<>();
+    HashMap<String, Employe> employe ;
+    HashMap<String, Rapport> reports ;
+    ArrayList<Client> clients;
+    BaseDeDonnees instance;
 
-    public BaseDeDonnees() {
-//gestionnaires.put("247", new Gestionnaire("Gestionnaire", "1", "Gestionnaire", "Gestionnaire", "Gestionnaire", "Gestionnaire"));
-
-        Gestionnaire gestionnaire = new Gestionnaire("G01","Tom","Alpha","Keita","00932");
-        Prepose prepose = new Prepose("B002","Ismael","Gans","Roger","9204");
-
-        employe.put("0923",gestionnaire);
-        employe.put("0895",prepose);
-
-
+    public BaseDeDonnees()
+    {
+        employe = new HashMap<>();
+        clients = new ArrayList<>();
     }
+
+    public BaseDeDonnees getInstance ()
+    {
+        if (instance == null)
+        {
+            instance = new BaseDeDonnees();
+        }
+
+        return instance;
+    }
+
+    public ArrayList<Client> getClients()
+    {
+        return clients;
+    }
+
+    //    public BaseDeDonnees() {
+////gestionnaires.put("247", new Gestionnaire("Gestionnaire", "1", "Gestionnaire", "Gestionnaire", "Gestionnaire", "Gestionnaire"));
+//
+//        Gestionnaire gestionnaire = new Gestionnaire("G01","Tom","Alpha","Keita","00932");
+//        Prepose prepose = new Prepose("B002","Ismael","Gans","Roger","9204");
+//
+//        employe.put("0923",gestionnaire);
+//        employe.put("0895",prepose);
+//
+//
+//    }
 
     //auto increment id for hashmap Gestionnaires
 
