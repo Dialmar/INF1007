@@ -1,6 +1,6 @@
 package stockage;
 
-import modele.Client;
+
 import modele.Location;
 
 public class StockagePersistantLocation {
@@ -8,7 +8,7 @@ public class StockagePersistantLocation {
     private BaseDeDonnees baseDeDonnees;
 
     public StockagePersistantLocation(Location location) {
-        baseDeDonnees.getInstance();
+        BaseDeDonnees.getInstance();
     }
 
     public void sauvegarde (Location location){

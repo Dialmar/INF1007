@@ -45,6 +45,8 @@ public class BaseDeDonnees {
     private BaseDeDonnees() {
 //gestionnaires.put("247", new Gestionnaire("Gestionnaire", "1", "Gestionnaire", "Gestionnaire", "Gestionnaire", "Gestionnaire"));
 
+        employe = new HashMap<>();
+        reports = new HashMap<>();
         Gestionnaire gestionnaire = new Gestionnaire("G01","Tom","Alpha","Keita","00932");
         Prepose prepose = new Prepose("B002","Ismael","Gans","Roger","9204");
 
