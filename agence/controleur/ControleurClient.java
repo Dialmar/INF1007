@@ -1,14 +1,14 @@
 package controleur;
 
 import modele.Client;
-import stockage.StockagePersistantClient;
+import stockage.StockagePersistant;
 
 import java.util.List;
 
 public class ControleurClient {
     private Client client;
     private List<Client> listeClient;
-    private StockagePersistantClient stockage;
+    private StockagePersistant stockage;
 
     public Client getClient() {
         return client;
@@ -27,9 +27,7 @@ public class ControleurClient {
     }
 
     public void sauvegarde (Client client){
-        stockage.sauvegarde(client);
-
-
+        stockage.sauvegardeClient(client);
     }
 
 }
