@@ -1,9 +1,10 @@
 package controleur;
 
 import modele.Rapport;
+import stockage.BaseDeDonnees;
 
 public class Registre {
-    private ControleurRapport controleurRapport;
+    private static ControleurRapport controleurRapport;
     private ControleurRetour controleurRetour;
     private ControleurFacturation controleurFacturation;
 
@@ -14,18 +15,24 @@ public class Registre {
     }
 
     //private static Registre instance = new Registre();
-    public   void _saisirRapport(String l, String p){
+    public static void _saisirRapport(String l, String p) {
         boolean connexion;
         connexion = controleurRapport.connecter(l, p);
-        if (connexion){
+        if (connexion) {
             controleurRapport.saisirRapport();
-        }else{
+        } else {
             controleurRapport.notAuth();
         }
     }
-    public void enregistrerRapport(String t, String d, String des){
-        controleurRapport.saveRapport(t,d,des);
+
+    public void enregistrerRapport(String t, String d, String des) {
+
+        controleurRapport.saveRapport(t, d, des);
     }
 
+    public static void afficherRapport() {
+       BaseDeDonnees.affichageRapport();
+    }
 }
+
 

@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BaseDeDonnees {
-    HashMap<String, Employe> employe;
-    static HashMap<String, Rapport> reports;
+    static HashMap<String, Employe> employe=new HashMap<>();
+    static HashMap<String, Rapport> reports=new HashMap<>();
     ArrayList<Client> clients;
     ArrayList<Location> locations;
     ArrayList<Vehicule> vehicules;
@@ -34,9 +34,8 @@ public class BaseDeDonnees {
 
     private BaseDeDonnees() {
 
-        employe = new HashMap<>();
-        reports = new HashMap<>();
-        Gestionnaire gestionnaire = new Gestionnaire("G01", "Tom", "Alpha", "Keita", "00932");
+        //Employe
+        Gestionnaire gestionnaire = new Gestionnaire("G01", "Tom", "Alpha", "Yves", "00923");
         Prepose prepose = new Prepose("B002", "Ismael", "Gans", "Roger", "9204");
 
         employe.put("0923", gestionnaire);
@@ -48,7 +47,7 @@ public class BaseDeDonnees {
 
     }
 
-    public boolean isGestionnaireLogin(String login, String password) {
+    public static boolean isGestionnaireLogin(String login, String password) {
         boolean result = false;
         for (Employe employe1 : employe.values()) {
             if (employe1.getLogin().equals(login) && employe1.getPassword().equals(password)) {
@@ -63,7 +62,7 @@ public class BaseDeDonnees {
     }
 
 
-    public void affichageRapport() {
+    public static void affichageRapport() {
         for (Rapport rapport : BaseDeDonnees.reports.values()) {
             System.out.println("DATE: " + rapport.getDate());
             System.out.println("TITRE : " + rapport.getTitre());

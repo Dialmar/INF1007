@@ -24,14 +24,13 @@ public class ControleurRapport {
   }
 
   public void saveRapport(String t, String d, String des){
-    //  System.out.println("Controleur SAve db");
+    System.out.println("Rapport sauvegarde avec succes/n Retour au menu principal");
+
     Rapport rapport = new Rapport(t,d,des);
     baseDeDonnees.saveRapport(rapport);
-    baseDeDonnees.affichageRapport();
+
 
   }
-
-
 }
 
 
