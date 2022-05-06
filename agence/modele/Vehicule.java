@@ -5,23 +5,24 @@ public class Vehicule {
     private String Marque;
     private String numImmatri;
     private String Type;
-    private int Annee;
+    private String Annee;
     private String Etat;
     private String Kilometrage;
     private boolean location;
     private boolean reservation;
 
-    public Vehicule(int NumeroDeSerie, String Marque, String Type, int Annee, String Etat, String Kilometrage, String numImmatri) {
-        this.NumeroDeSerie = NumeroDeSerie;
-        this.Marque = Marque;
-        this.Type = Type;
-        this.Annee = Annee;
-        this.Etat = Etat;
-        this.Kilometrage = Kilometrage;
+    public Vehicule(String numeroDeSerie, String marque, String numImmatri, String type, String annee, String etat, String kilometrage, boolean location, boolean reservation) {
+        NumeroDeSerie = numeroDeSerie;
+        Marque = marque;
         this.numImmatri = numImmatri;
-        reservation = false;
-        location = false;
+        Type = type;
+        Annee = annee;
+        Etat = etat;
+        Kilometrage = kilometrage;
+        this.location = location;
+        this.reservation = reservation;
     }
+
 
     public String getNumImmatri()
     {
@@ -63,14 +64,14 @@ public class Vehicule {
         Type = type;
     }
 
-    public int getAnnee()
+    public String getAnnee()
     {
         return Annee;
     }
 
     public void setAnnee(int annee)
     {
-        Annee = annee;
+        Annee = String.valueOf(annee);
     }
 
     public String getEtat()

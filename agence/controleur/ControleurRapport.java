@@ -11,7 +11,7 @@ public class ControleurRapport {
   BaseDeDonnees baseDeDonnees =  BaseDeDonnees.getInstance();
 
   public boolean connecter(String login, String password) {
-    return baseDeDonnees.isGestionnaireLogin(login,password);
+    return BaseDeDonnees.isGestionnaireLogin(login,password);
   }
 
   void saisirRapport(){

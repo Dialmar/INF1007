@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class StockagePersistant
 {
-    private BaseDeDonnees baseDeDonnees;
+    public static BaseDeDonnees baseDeDonnees;
 
     public StockagePersistant() {
         BaseDeDonnees.getInstance();
@@ -17,14 +17,14 @@ public class StockagePersistant
     public void sauvegardeClient(Client client){
         baseDeDonnees.clients.add(client);    }
 
-    public Client recupererClient(String numeroDossier)
+    public static Client recupererClient(String numeroDossier)
     {
-        ArrayList<Client> temp = baseDeDonnees.clients;
-        for (Client client : temp)
+
+        for (Client client1 : BaseDeDonnees.clients)
         {
-            if (client.getNumeroDossier().equals(numeroDossier))
+            if (client1.getNumeroDossier().equals(numeroDossier))
             {
-                return client;
+                return client1;
             }
         }
         return null;
@@ -37,7 +37,7 @@ public class StockagePersistant
     public void sauvegardeVehicule(Vehicule vehicule){
         baseDeDonnees.vehicules.add(vehicule);    }
 
-    public Vehicule recupererVehicule(String numImmatri)
+    public static Vehicule recupererVehicule(String numImmatri)
     {
         ArrayList<Vehicule> temp = baseDeDonnees.vehicules;
         for (Vehicule vehicule : temp)
