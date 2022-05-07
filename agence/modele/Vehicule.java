@@ -12,7 +12,7 @@ public class Vehicule {
     private boolean reservation;
 
     public Vehicule(String numeroDeSerie, String marque, String numImmatri, String type, String annee, String etat, String kilometrage, boolean location, boolean reservation) {
-        NumeroDeSerie = numeroDeSerie;
+        NumeroDeSerie = Integer.parseInt(numeroDeSerie);
         Marque = marque;
         this.numImmatri = numImmatri;
         Type = type;

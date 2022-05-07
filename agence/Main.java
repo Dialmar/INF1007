@@ -112,7 +112,7 @@ menuGestionEmployes();
                 System.out.println("Client trouve  il s'agit de :"+ Objects.requireNonNull(StockagePersistant.recupererClient(numeroclient)).getNom());
                 System.out.println("Entrez le numero de vehicule :");
                 String numerovehicule = input.nextLine();
-                System.out.println("Vehicule trouve il s'agit de :"+ Objects.requireNonNull(StockagePersistant.recupererVehicule(numerovehicule)).getNom());
+                System.out.println("Vehicule trouve il s'agit de :"+ Objects.requireNonNull(StockagePersistant.recupererVehicule(numerovehicule)).getMarque());
 
 
 
