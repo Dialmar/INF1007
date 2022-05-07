@@ -1,5 +1,10 @@
 package modele;
 
+/**
+ *  : Vehicule
+ *  : Vehicule.java
+ *  : Vehicule: classe de base pour les vehicules de la simulation de l'agence
+ */
 public class Vehicule {
     private int NumeroDeSerie;
     private String Marque;

@@ -8,6 +8,9 @@ import modele.Employe.Prepose;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Classe permettant de gérer les données de la base de données: les employés, les clients, les contrats, etc. Cette classe est
+ */
 public class BaseDeDonnees {
     static HashMap<String, Employe> employe=new HashMap<>();
     static HashMap<String, Rapport> reports=new HashMap<>();

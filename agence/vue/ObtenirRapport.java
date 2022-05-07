@@ -6,6 +6,11 @@ import modele.Rapport;
 
 import java.util.Scanner;
 
+/**
+ * Classe qui permet de gérer l'affichage de la page de récupération de rapport: ObtenirRapport.    ***********************
+@author GANSONRE ISMAEL
+ */
+
 public class ObtenirRapport {
     private Registre registre = new Registre();
     public void saisie(){

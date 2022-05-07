@@ -2,6 +2,9 @@ package modele;
 
 import java.util.regex.Pattern;
 
+/**
+ * Classe Client qui représente un client de l'agence de voyage de l'application. Cette classe est un modèle de données. Elle est composée de :      * un identifiant unique (id)      * un nom (nom)      * un prénom (prenom)      * un adresse (adresse)      * un numéro de téléphone (telephone)      * un email (email)      * un mot de passe (motDePasse)     * un statut (statut)
+ */
 public class Client {
     //public int id;
     private static final String EMAIL_REGEX_PATTERN = "^(.+)@(.+).(.+)$";

@@ -7,13 +7,23 @@ import stockage.StockagePersistant;
 
 import java.util.List;
 
+/**
+ * Classe ControleurReservation
+ *
+ *
+ * @author FATIMA DIALLO
+ *
+ */
 public class ControleurReservation {
+    // attributs
     private Reservation reservation;
     private Vehicule vehicule;
     private Client client;
     private List<Reservation> listeReservation;
     private StockagePersistant stockage;
 
+    // constructeur
+    //
     public Reservation getReservaation() {
         return reservation;
     }
@@ -54,5 +64,5 @@ public class ControleurReservation {
         reservation = new Reservation(client, vehicule);
         client.setReservation(reservation);
     }
-
+//
 }

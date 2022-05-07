@@ -1,5 +1,8 @@
 package modele;
 
+/**
+ * Classe Reservation: classe représentant une réservation d'un client à UNE LOCATIONl dans une agence de voyage.
+ */
 public class Reservation {
     private float kilometrage;
     private float prix;

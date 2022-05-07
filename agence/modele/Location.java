@@ -1,5 +1,8 @@
 package modele;
 
+/**
+ * Classe Location: classe permettant de représenter une location dans le système de gestion de location de véhicules de l'agence de location de véhicules. Cette classe est un modèle de données.   La classe Location est composée de :    - un identifiant de location (int)    - un identifiant de client (int)    - un identifiant de véhicule (int)    - une date de début (Date)    - une date de fin (Date)    - un montant (double)    - un commentaire (String)   - un statut (String)  - un commentaire (String)
+ */
 public class Location {
     private float kilometrage;
     private float prix;

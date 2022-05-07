@@ -1,5 +1,8 @@
 package modele;
 
+/**
+ * Classe Rapport: classe qui représente un rapport de visite de l'agence de voyage de l'application Agence de Voyage    (AGV)   (version 1.0)
+ */
 public class Rapport {
     private String titre, date, desc;
 

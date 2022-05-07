@@ -5,7 +5,15 @@ import stockage.StockagePersistant;
 
 import java.util.List;
 
+/**
+ * Classe ControleurClient : CONTROLEUR qui gère les clients de l'agence
+ *
+ *
+ *
+ * @author Richard SEMANOU
+ */
 public class ControleurClient {
+    // ATTRIBUTS
     private Client client;
     private List<Client> listeClient;
     private StockagePersistant stockage;

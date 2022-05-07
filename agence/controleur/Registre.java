@@ -3,11 +3,16 @@ package controleur;
 import modele.Rapport;
 import stockage.BaseDeDonnees;
 
+/**
+ * Classe qui gère les opérations de l'application
+ * @author GANSONRE ISMAEL
+ */
 public class Registre {
+   //attributs
     private static ControleurRapport controleurRapport;
     private ControleurRetour controleurRetour;
     private ControleurFacturation controleurFacturation;
-
+//
     public Registre() {
         controleurRapport = new ControleurRapport();
         controleurRetour = new ControleurRetour();

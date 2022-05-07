@@ -6,6 +6,9 @@ import modele.Vehicule;
 
 import java.util.ArrayList;
 
+/**
+ * Classe permettant de stocker les données dans un fichier: clients, vehicules, locations et les réservations de locations.
+ */
 public class StockagePersistant
 {
     public static BaseDeDonnees baseDeDonnees;

@@ -9,6 +9,14 @@ import static stockage.BaseDeDonnees.isGestionnaireLogin;
 
 public class Main {
 
+    /**
+     * @param args the command line arguments
+     *             1. Gestion des employes
+     *             2. Gestion des clients
+     *             3. Gestion des vehicules
+     *             4. Gestion des reservations
+     *             5. Gestion des rapports
+     */
     public static void main(String[] args) {
         // TODO  Ecrire le menu principal
         // TODO  Ecrire le menu de gestion des employes
@@ -25,6 +33,16 @@ public class Main {
 
     }
 
+    /**
+     * @param MENU_PRINCIPAL
+     * @param MENU_GESTION_EMPLOYES
+     * @param MENU_GESTION_CLIENTS
+     * @param MENU_GESTION_VEHICULES
+     * @param MENU_GESTION_RESERVATIONS
+     * @param MENU_GESTION_RAPPORTS
+     * @param MENU_GESTION_FACTURATIONS
+     *
+     */
     public static void menuPrincipal() {
         System.out.println("Menu principal");
         System.out.println("1. Gestion des employes");
